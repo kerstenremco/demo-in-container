@@ -1,0 +1,30 @@
+{
+  "wp": {
+    "containerOptios": {
+      "location": "westeurope",
+      "tags": {},
+      "containers": [
+        {
+          "image": "mcr.microsoft.com/azuredocs/aci-helloworld:latest",
+          "environmentVariables": [],
+          "ports": [
+            {
+              "protocol": "TCP",
+              "port": 80
+            }
+          ],
+          "resources": {
+            "requests": {
+              "memoryInGB": 1.5,
+              "cpu": 1
+            }
+          }
+        }
+      ],
+      "restartPolicy": "OnFailure",
+      "osType": "Linux",
+      "sku": "Standard",
+      "initContainers": []
+    }
+  }
+}
